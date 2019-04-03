@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart'; //include code (classes) from flutter framework
 // import 'package:flutter/rendering.dart';
-import './productManager.dart';
+import './pages/home.dart';
 
 main() {
   //attach widgets to main function so it will render the widgets to the screen.
@@ -51,17 +51,9 @@ class MyApp extends StatelessWidget {
                 .light //default color set . dark sets to dark mode like colors
         ),
         // In dart new keyword is optional.
-        home: //its a named argument which is used by most of the classes.
+        home: HomePage(),//its a named argument which is used by most of the classes.
         //home requires another widget which is drawn on the screen when the app loads.
-        new Scaffold(            //press and release ctrl + space
-          //scaffold creates a new page with default white bkgrnd where we can add
-          // appbar and such widgets by passing data in this constructor.
-          appBar: new AppBar(
-            //here goes another widget class constructor
-            title: new Text("EasyList"),
-          ),
-          body: ProductManager(),  //It's parameter has a default value specified so no need to add parameter,but you can.
-          ), //created a named argument in the constructor of ProductManager Class using curly braces
+
         );
   }
 
